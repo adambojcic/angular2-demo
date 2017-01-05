@@ -1,0 +1,32 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/tmp
+js/*
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.c9
+
+# misc
+/.sass-cache
+npm-debug.log
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+
+# ignore js and map files
+**/*.map
+#src/**/*.js
+app/**/*.js
+!app/assets/*.js
+api/**/*.js
