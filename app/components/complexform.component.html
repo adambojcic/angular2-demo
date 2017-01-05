@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <h2>Form with Validations</h2>
+    <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+      <!-- We add an additional check to see if the user has at least clicked on the form field before displaying the error -->
+      <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['firstName'].valid && complexForm.controls['firstName'].touched}">
+        <label>First Name:</label>
+        <input class="form-control" type="text" placeholder="John" [formControl]="complexForm.controls['firstName']">
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['lastName'].valid && complexForm.controls['lastName'].touched}">
+        <label>Last Name</label>
+        <input class="form-control" type="text" placeholder="Doe" [formControl]="complexForm.controls['lastName']">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="alert alert-danger" *ngIf="!complexForm.controls['gender'].valid && complexForm.controls['gender'].touched">You must select a gender.</div>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="gender" value="Male" [formControl]="complexForm.controls['gender']">
+          Male
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="gender" value="Female" [formControl]="complexForm.controls['gender']">
+          Female
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Activities</label>
+      </div>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="hiking" name="hiking" [formControl]="complexForm.controls['hiking']"> Hiking
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="swimming" name="swimming" [formControl]="complexForm.controls['swimming']"> Swimming
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="running" name="running" [formControl]="complexForm.controls['running']"> Running
+      </label>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!complexForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
