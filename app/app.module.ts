@@ -5,13 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent }   from './app.component';
 
-import { HeaderComponent }   from './components/header.component';
-import { NavigationComponent }   from './components/navigation.component';
+import { HeaderComponent }   from './components/header/header.component';
+import { NavigationComponent }   from './components/navigation/navigation.component';
 
-
-
-import { ComplexFormComponent } from './components/complexform.component';
-import { ItemsGridComponent } from './components/itemsgrid.component';
+import { ComplexFormComponent } from './components/complexform/complexform.component';
+import { ItemsGridComponent } from './components/itemsgrid/itemsgrid.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: ItemsGridComponent },
