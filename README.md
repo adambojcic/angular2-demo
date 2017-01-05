@@ -20,3 +20,14 @@ Postavke:
 tsconfig.json
     - tsc output stavljen u js direktorij
     - tsc map isključen
+
+
+
+Korisno:
+
+Bootstrap nav na active
+--------------------------------------------------------------------------------
+<ul class="nav navbar-nav">
+  <li [routerLinkActive]="['active']"> <a [routerLink]="['one']">One</a></li>
+  <li [routerLinkActive]="['active']"> <a [routerLink]="['second']">Second</a></li>
+</ul>
