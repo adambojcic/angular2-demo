@@ -5,7 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'complex-form',
-  templateUrl : 'app/components/complexform.component.html'
+  templateUrl : 'app/components/complexform/complexform.component.html'
 })
 
 
