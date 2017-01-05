@@ -7,6 +7,8 @@ import { AppComponent }   from './app.component';
 
 import { HeaderComponent }   from './components/header/header.component';
 import { NavigationComponent }   from './components/navigation/navigation.component';
+import { FooterComponent }   from './components/footer/footer.component';
+
 
 import { ComplexFormComponent } from './components/complexform/complexform.component';
 import { ItemsGridComponent } from './components/itemsgrid/itemsgrid.component';
@@ -19,7 +21,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, HeaderComponent, ComplexFormComponent, ItemsGridComponent, NavigationComponent ],
+  declarations: [ AppComponent, HeaderComponent, ComplexFormComponent,
+                  ItemsGridComponent, NavigationComponent, FooterComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
